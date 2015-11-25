@@ -10,6 +10,7 @@ public class DefensiveInventoryManager : MonoBehaviour {
 	public float positioningLookDist = 3.0f;
 	public GameObject lookTestSphere;
 	public Vector3 lookAtPathPoint;
+	public Text unit1availableText, unit2availableText, unit3availableText;
 	
 	GameObject curSpawnedUnit;
 	RaycastHit hit;
@@ -25,6 +26,10 @@ public class DefensiveInventoryManager : MonoBehaviour {
 		curAvailableUnit1s = maxUnit1Number;
 		curAvailableUnit2s = maxUnit2Number;
 		curAvailableUnit3s = maxUnit3Number;
+
+		unit1availableText.text = curAvailableUnit1s + " Unit 1 available";
+		unit2availableText.text = curAvailableUnit2s + " Unit 2 available";
+		unit3availableText.text = curAvailableUnit3s + " Unit 3 available";
 
 		lookAtPathPoint = Vector3.zero;
 
@@ -52,6 +57,10 @@ public class DefensiveInventoryManager : MonoBehaviour {
 						curSpawnedUnit.transform.LookAt(new Vector3(lookAtPathPoint.x, 0.5f, lookAtPathPoint.z));
 					}
 				}
+
+				unit1availableText.text = curAvailableUnit1s + " Unit 1 available";
+				unit2availableText.text = curAvailableUnit2s + " Unit 2 available";
+				unit3availableText.text = curAvailableUnit3s + " Unit 3 available";
 			}
 
 			if(Input.GetMouseButtonDown(0))
