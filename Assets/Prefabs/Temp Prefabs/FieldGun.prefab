@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 481532}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,8 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 457512}
-  - 65: {fileID: 6576204}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FieldGun_Gimbal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +38,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 415370}
-  m_Layer: 0
+  - 65: {fileID: 6582594}
+  m_Layer: 9
   m_Name: FieldGun
   m_TagString: DefensiveUnit
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 466220}
   - 212: {fileID: 21260592}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FieldGun_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 423994}
   - 212: {fileID: 21242416}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FieldGun_Guy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .5, z: 0}
+  m_LocalPosition: {x: -11.9300003, y: .5, z: 3.8499999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 457512}
@@ -142,12 +142,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 466220}
   m_RootOrder: 1
---- !u!65 &6576204
+--- !u!65 &6582594
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121678}
+  m_GameObject: {fileID: 124042}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
