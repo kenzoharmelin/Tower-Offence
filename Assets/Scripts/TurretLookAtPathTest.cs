@@ -4,7 +4,8 @@ using System.Collections;
 public class TurretLookAtPathTest : MonoBehaviour {
 
 	public GameObject defenceInventoryManager;
-	DefensiveInventoryManager placementManager;
+	//DefensiveInventoryManager placementManager;
+	DefensiveUnitSpawner placementManager;
 
 	public float pointX, pointZ;
 	public Transform[] lookTestPoints;
@@ -16,7 +17,8 @@ public class TurretLookAtPathTest : MonoBehaviour {
 	void Start () {
 	
 		curTime = 0f;
-		placementManager = defenceInventoryManager.GetComponent<DefensiveInventoryManager>();
+		//placementManager = defenceInventoryManager.GetComponent<DefensiveInventoryManager>();
+		placementManager = defenceInventoryManager.GetComponent<DefensiveUnitSpawner>();
 	}
 	
 	void Update()

@@ -7,10 +7,10 @@ public class TowerPlacement : MonoBehaviour {
 	public LayerMask blockingLayer, towerMask;
 	public string selectableTag;
 	public GameObject placementIndicator;
+	public Vector3 oldPos, newPos, followPos;
 
-	Vector3 oldPos, newPos, followPos;
 	RaycastHit rayHit;
-	bool canPlaceTower = true, towerSelected = false;
+	public bool canPlaceTower = true, towerSelected = false;
 	[Header("Debug Indicator")]
 	[SerializeField]
 	string canPlace = "False", isTowerSelected = "False";
@@ -24,7 +24,9 @@ public class TowerPlacement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if(Input.GetMouseButtonDown(0))
+
+		//if(Input.GetMouseButtonDown(0))
+		if(selectedTower != null)
 		{
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			
@@ -47,7 +49,7 @@ public class TowerPlacement : MonoBehaviour {
 
 						
 		}
-		
+
 		if(Input.GetMouseButtonUp(0))
 		{
 			if(selectedTower != null)
@@ -76,7 +78,7 @@ public class TowerPlacement : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out rayHit, 100))
 			{
-				if (rayHit.collider.CompareTag("Path") || rayHit.collider.CompareTag("DefensiveUnit"))
+				if (rayHit.collider.CompareTag("Path") || rayHit.collider.CompareTag("DefensiveUnit") || Vector3.Distance(selectedTower.transform.position, oldPos) < 2.0f)
 				{
 					canPlaceTower = false;
 					indicator.canNotPlaceIndicator.SetActive(true);
@@ -89,9 +91,9 @@ public class TowerPlacement : MonoBehaviour {
 					indicator.canPlaceIndicator.SetActive(true);
 				}
 
-				float mouseX = rayHit.point.x;
-				float mouseZ = rayHit.point.z;
-				followPos = new Vector3(mouseX, selectedTower.transform.position.y, mouseZ);
+				//float mouseX = rayHit.point.x;
+				//float mouseZ = rayHit.point.z;
+				//followPos = new Vector3(mouseX, selectedTower.transform.position.y, mouseZ);
 				
 				selectedTower.transform.position = followPos;
 				placementIndicator.transform.position = followPos;

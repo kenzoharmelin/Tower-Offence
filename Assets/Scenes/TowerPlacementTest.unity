@@ -597,6 +597,11 @@ MonoBehaviour:
     m_Bits: 512
   selectableTag: DefensiveUnit
   placementIndicator: {fileID: 2053654337}
+  oldPos: {x: 0, y: 0, z: 0}
+  newPos: {x: 0, y: 0, z: 0}
+  followPos: {x: 0, y: 0, z: 0}
+  canPlaceTower: 1
+  towerSelected: 0
   canPlace: False
   isTowerSelected: False
 --- !u!4 &530662981
@@ -668,7 +673,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1047993761}
+      - m_Target: {fileID: 1047993763}
         m_MethodName: InstantiateDefensiveUnit_2
         m_Mode: 1
         m_Arguments:
@@ -1054,6 +1059,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1047993762}
   - 114: {fileID: 1047993761}
+  - 114: {fileID: 1047993763}
   m_Layer: 0
   m_Name: DefensiveInventoryManager
   m_TagString: Untagged
@@ -1067,7 +1073,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1047993760}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c384f18d14ae084092c553633cac3a3, type: 3}
   m_Name: 
@@ -1083,6 +1089,7 @@ MonoBehaviour:
   curAvailableUnit3s: 0
   positioningLookDist: 8
   lookTestSphere: {fileID: 2019307859}
+  inputManager: {fileID: 530662979}
   lookAtPathPoint: {x: 0, y: 0, z: 0}
   unit1availableText: {fileID: 1032558910}
   unit2availableText: {fileID: 1009795542}
@@ -1099,6 +1106,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &1047993763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1047993760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859725e25d61aaa4aaf23a866fcbdac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Unit1: {fileID: 124042, guid: c931b3295a356e64d88a13760a8a2494, type: 2}
+  Unit2: {fileID: 190464, guid: 75f1ee4dd2b4855419e98b9269721973, type: 2}
+  Unit3: {fileID: 192680, guid: 7b74a0f8886a09f41a5367f920745398, type: 2}
+  maxUnit1Number: 5
+  maxUnit2Number: 3
+  maxUnit3Number: 2
+  curAvailableUnit1s: 0
+  curAvailableUnit2s: 0
+  curAvailableUnit3s: 0
+  positioningLookDist: 3
+  lookTestSphere: {fileID: 2019307859}
+  placementIndicator: {fileID: 2053654337}
+  inputManager: {fileID: 530662979}
+  lookAtPathPoint: {x: 0, y: 0, z: 0}
+  unit1availableText: {fileID: 1032558910}
+  unit2availableText: {fileID: 1009795542}
+  unit3availableText: {fileID: 81133576}
 --- !u!1 &1082594111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1209,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1047993761}
+      - m_Target: {fileID: 1047993763}
         m_MethodName: InstantiateDefensiveUnit_1
         m_Mode: 1
         m_Arguments:
@@ -1352,7 +1387,7 @@ GameObject:
   - 114: {fileID: 1176214595}
   m_Layer: 5
   m_Name: DefensiveInventoryBack
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1479,7 +1514,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1047993761}
+      - m_Target: {fileID: 1047993763}
         m_MethodName: InstantiateDefensiveUnit_3
         m_Mode: 1
         m_Arguments:
