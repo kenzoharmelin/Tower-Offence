@@ -70,6 +70,8 @@ public class DefensiveUnitSpawner : MonoBehaviour {
 			{
 				if(twrPlacementScript.canPlaceTower == false)
 				{
+					Destroy(curSpawnedUnit);
+
 					if(spawnedUnitID == 1)
 					{
 						curAvailableUnit1s++;
@@ -85,8 +87,9 @@ public class DefensiveUnitSpawner : MonoBehaviour {
 						curAvailableUnit3s++;
 						spawnedUnitID = 0;
 					}
-					Destroy(curSpawnedUnit);
+
 				}
+				curSpawnedUnit.GetComponent<BoxCollider>().enabled = true;
 				curSpawnedUnit = null;
 				lookTestSphere.transform.position = new Vector3(0,200,0);
 				lookAtPathPoint = Vector3.zero;
@@ -121,6 +124,7 @@ public class DefensiveUnitSpawner : MonoBehaviour {
 			curSpawnedUnit = Instantiate(Unit2) as GameObject;
 			curAvailableUnit2s--;
 			twrPlacementScript.selectedTower = curSpawnedUnit;
+			spawnedUnitID = 2;
 		}
 	}
 	public void InstantiateDefensiveUnit_3()
@@ -130,6 +134,7 @@ public class DefensiveUnitSpawner : MonoBehaviour {
 			curSpawnedUnit = Instantiate(Unit3) as GameObject;
 			curAvailableUnit3s--;
 			twrPlacementScript.selectedTower = curSpawnedUnit;
+			spawnedUnitID = 3;
 		}
 	}
 }

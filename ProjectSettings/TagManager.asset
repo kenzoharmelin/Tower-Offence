@@ -8,6 +8,7 @@ TagManager:
   - DefensiveUnit
   - OffensiveUnit
   - Button
+  - InputManager
   layers:
   - Default
   - TransparentFX

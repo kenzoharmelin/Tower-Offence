@@ -66,13 +66,13 @@ public class TowerPlacement : MonoBehaviour {
 				towerSelected = false;
 
 				//turn selectedTower's collider back on so it again becomes selectable
-				selectedTower.GetComponent<BoxCollider>().enabled = true;
+				//selectedTower.GetComponent<BoxCollider>().enabled = true;
 			}
 		}
 		
 		if(towerSelected)
 		{
-			//debug "can place" and "tower selected" bools
+			//debug "can place" and "tower selected" bools - debug only. not required.
 			DebugPlacement();
 			
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -112,6 +112,7 @@ public class TowerPlacement : MonoBehaviour {
 
 	}
 
+	//debug only... cane be removed
 	void DebugPlacement()
 	{
 		if(canPlaceTower == true)
