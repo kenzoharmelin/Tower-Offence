@@ -3,18 +3,23 @@ using System.Collections;
 
 public class MenuController : MonoBehaviour {
 
-	void GotoInstructions()
+	public void GotoInstructions()
 	{
-
+		Application.LoadLevel("Instructions");
 	}
 
-	void GotoSettings()
+	public void GotoSettings()
 	{
-
+		Application.LoadLevel("Settings");
 	}
 
-	void GotoPlay()
+	public void GotoPlay()
 	{
+		Application.LoadLevel(1);
+	}
 
+	public void GoBack()
+	{
+		Application.LoadLevel("Main menu");
 	}
 }

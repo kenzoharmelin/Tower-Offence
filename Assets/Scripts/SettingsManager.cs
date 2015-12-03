@@ -14,19 +14,14 @@ public class SettingsManager : MonoBehaviour {
 		brightnessText.text = brightnessSlider.value.ToString();
 		volumeText.text = brightnessSlider.value.ToString();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	public void BrightnessValueChange()
 	{
-
+		brightnessText.text = brightnessSlider.value.ToString();
 	}
 
 	public void VolumeValueChange()
 	{
-
+		volumeText.text = brightnessSlider.value.ToString();
 	}
 }
