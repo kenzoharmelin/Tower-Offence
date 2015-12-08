@@ -1,0 +1,245 @@
+fileFormatVersion: 2
+guid: 5c7bc5270eaf7c74691bb02dcdb1619a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: button assets_0
+    21300002: button assets_1
+    21300004: button assets_2
+    21300006: button assets_3
+    21300008: button assets_4
+    21300010: button assets_5
+    21300012: button assets_6
+    21300014: button assets_7
+    21300016: button assets_8
+    21300018: button assets_9
+    21300020: button assets_10
+    21300022: button assets_11
+    21300024: button assets_12
+    21300026: button assets_13
+    21300028: button assets_14
+    21300030: button assets_15
+    21300032: button assets_16
+    21300034: button assets_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: button assets_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 946
+        width: 253
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_1
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 957
+        width: 452
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 807
+        width: 253
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 678
+        width: 253
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_4
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 535
+        width: 268
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_5
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 392
+        width: 268
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_6
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 258
+        width: 268
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_7
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 183
+        width: 210
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_8
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 104
+        width: 202
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_9
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 104
+        width: 203
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_10
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 108
+        width: 204
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_11
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 108
+        width: 202
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_12
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 110
+        width: 202
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_13
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 113
+        width: 210
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_14
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 42
+        width: 208
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_15
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 3
+        width: 204
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_16
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 3
+        width: 202
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button assets_17
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 5
+        width: 203
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
