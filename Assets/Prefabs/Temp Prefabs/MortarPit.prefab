@@ -34,7 +34,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &142656
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -71,7 +71,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 416502}
   - 65: {fileID: 6542864}
-  - 114: {fileID: 11488024}
   m_Layer: 9
   m_Name: MortarPit
   m_TagString: DefensiveUnit
@@ -97,14 +96,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142656}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 403786}
   - {fileID: 445804}
-  m_Father: {fileID: 498122}
-  m_RootOrder: 0
+  m_Father: {fileID: 416502}
+  m_RootOrder: 1
 --- !u!4 &416502
 Transform:
   m_ObjectHideFlags: 1
@@ -112,10 +111,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.39325547, y: -1.52920999e-16, z: -6.47373295}
+  m_LocalPosition: {x: 0, y: .5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 498122}
+  - {fileID: 413084}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &445804
@@ -139,8 +139,7 @@ Transform:
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 413084}
+  m_Children: []
   m_Father: {fileID: 416502}
   m_RootOrder: 0
 --- !u!65 &6542864
@@ -155,28 +154,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.85000002, y: .100000001, z: 1.84000003}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11488024
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 192680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23f96233371c76d4181297ea19293380, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tag: OffensiveUnit
-  processTick: 1
-  atkDamage: 5
-  range: 10
-  attackCooldown: 5
-  attackTime: 0
-  curHealth: 60
-  maxHealth: 60
-  round: {fileID: 0}
-  turret: {fileID: 142656}
-  firepoint: {fileID: 150892}
 --- !u!212 &21277780
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -195,9 +172,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -223,9 +198,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -241,8 +214,16 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: tag
-      value: OffensiveUnit
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
