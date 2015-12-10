@@ -25,6 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 454084}
   - 65: {fileID: 6517150}
+  - 114: {fileID: 11440114}
   m_Layer: 0
   m_Name: ScoutCar
   m_TagString: OffensiveUnit
@@ -107,8 +108,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126110}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .529999971, y: .5, z: -2.6400001}
+  m_LocalRotation: {x: 0, y: .700356305, z: 0, w: .713793457}
+  m_LocalPosition: {x: -32.227375, y: .0779738128, z: .208459422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 428870}
@@ -126,6 +127,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.13999999, y: .100000001, z: 1.61000001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11440114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192df4c20312b60489faae3f59ac2966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathing:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  speed: 5
 --- !u!212 &21245504
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -144,7 +177,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -170,7 +205,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
