@@ -104,5 +104,6 @@ public class TowerAI : MonoBehaviour {
 		Quaternion _wantRot = Quaternion.LookRotation((target.transform.position - transform.position)); //apply rotation to new var
 		
 		turret.transform.rotation = Quaternion.Euler(0f,_wantRot.eulerAngles.y, 0f); //rotation
+
 	}
 }

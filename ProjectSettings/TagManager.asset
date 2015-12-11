@@ -9,6 +9,9 @@ TagManager:
   - OffensiveUnit
   - Button
   - InputManager
+  - Path1SpawnPoint
+  - Path2SpawnPoint
+  - Path3SpawnPoint
   layers:
   - Default
   - TransparentFX

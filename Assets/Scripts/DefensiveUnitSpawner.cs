@@ -10,7 +10,7 @@ public class DefensiveUnitSpawner : MonoBehaviour {
 	public float positioningLookDist = 3.0f;
 	public GameObject lookTestSphere, placementIndicator, inputManager;
 	public Vector3 lookAtPathPoint;
-	public Text unit1availableText, unit2availableText, unit3availableText;
+	public Text unit1availableText, unit2availableText, unit3availableText; 
 	
 	GameObject curSpawnedUnit;
 	RaycastHit hit;
@@ -25,6 +25,7 @@ public class DefensiveUnitSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+
 		indicator = placementIndicator.GetComponent<PlacementIndicator>();
 		twrPlacementScript = inputManager.GetComponent<TowerPlacement>();
 

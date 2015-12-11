@@ -12,4 +12,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
   - enabled: 1
-    path: Assets/Scenes/TowerPlacementTest.unity
+    path: Assets/Scenes/Level_1.unity
