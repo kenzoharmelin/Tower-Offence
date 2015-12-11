@@ -40,6 +40,7 @@ GameObject:
   - 4: {fileID: 415370}
   - 65: {fileID: 6582594}
   - 114: {fileID: 11439138}
+  - 114: {fileID: 11442408}
   m_Layer: 9
   m_Name: FieldGun
   m_TagString: DefensiveUnit
@@ -86,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.9300003, y: .5, z: 3.8499999}
+  m_LocalPosition: {x: -2.60265493, y: 4.51954984e-18, z: 1.32302666}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 457512}
@@ -174,9 +175,21 @@ MonoBehaviour:
   attackTime: 0
   curHealth: 50
   maxHealth: 50
-  round: {fileID: 0}
+  round: {fileID: 183970, guid: 0496d3dc34506134ca76dead3e6a0f1a, type: 2}
   turret: {fileID: 121678}
   firepoint: {fileID: 108558}
+--- !u!114 &11442408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f11055f6d86e8c47a80e716d2534c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmgFX: {fileID: 0}
 --- !u!212 &21242416
 SpriteRenderer:
   m_ObjectHideFlags: 1
