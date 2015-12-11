@@ -26,6 +26,7 @@ GameObject:
   - 212: {fileID: 21297210}
   - 95: {fileID: 9562150}
   - 65: {fileID: 6513544}
+  - 114: {fileID: 11494718}
   m_Layer: 0
   m_Name: Infantryman
   m_TagString: OffensiveUnit
@@ -40,8 +41,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193772}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 8.14359856, y: -1e-15, z: -9.81333637}
+  m_LocalScale: {x: 2.19027877, y: 2.19027877, z: 2.19027877}
   m_Children:
   - {fileID: 433340}
   m_Father: {fileID: 0}
@@ -87,6 +88,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11494718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192df4c20312b60489faae3f59ac2966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathing: []
+  speed: 150
+  curHealth: 15
+  maxHealth: 15
 --- !u!212 &21297210
 SpriteRenderer:
   m_ObjectHideFlags: 1

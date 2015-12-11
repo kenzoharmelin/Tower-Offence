@@ -6,11 +6,13 @@ public class TowerAI : MonoBehaviour {
 
 	public float processTick, atkDamage, range, attackCooldown, attackTime, curHealth, maxHealth;
 
-	private GameObject target;
+	public GameObject target;
 
 	private Object deathFX;
 
-	public GameObject round, turret, firepoint;
+	public Object round;
+
+	public GameObject roundGO, turret, firepoint;
 
 	// Use this for initialization
 	void Start () 
@@ -67,12 +69,13 @@ public class TowerAI : MonoBehaviour {
 		Invoke ("ScanForEnemy", processTick);
 	}
 
-	public void Engage ()
+	void Engage ()
 	{
-		GameObject.Instantiate (round, (firepoint.transform.position), turret.transform.rotation);
+		roundGO = Instantiate (round, (firepoint.transform.position), Quaternion.Euler(-90f, turret.transform.rotation.y, 0f)) as GameObject;
+		roundGO.transform.parent = gameObject.transform;
 	}
 
-	void AdjustCurHealth (float val)
+	public void AdjustCurHealth (float val)
 	{
 		curHealth += val; //POSITIVE means heal, negative means damage
 		

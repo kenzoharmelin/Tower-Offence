@@ -170,12 +170,14 @@ MonoBehaviour:
   tag: OffensiveUnit
   processTick: 1
   atkDamage: 5
-  range: 20
-  attackCooldown: 5
+  range: 15
+  attackCooldown: 6
   attackTime: 0
   curHealth: 60
   maxHealth: 60
+  target: {fileID: 0}
   round: {fileID: 170020, guid: f7f31b24f67038a478b9c0bb6a1e1481, type: 2}
+  roundGO: {fileID: 0}
   turret: {fileID: 142656}
   firepoint: {fileID: 150892}
 --- !u!114 &11494932
@@ -264,6 +266,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: range
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackCooldown
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

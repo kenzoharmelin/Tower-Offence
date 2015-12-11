@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 434064}
   - 212: {fileID: 21245652}
   - 95: {fileID: 9575680}
+  - 114: {fileID: 11429068}
+  - 114: {fileID: 11415600}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -46,6 +48,31 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11415600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e6b337ed7d9234aaea570b5a883536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11429068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1dcd21791de41f48b9d3e2179e41541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 250
+  type: Mortar
 --- !u!212 &21245652
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -80,7 +107,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: type
+      value: Mortar
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 170020}

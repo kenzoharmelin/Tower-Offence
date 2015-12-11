@@ -13,6 +13,9 @@ public class OffenseAI : MonoBehaviour {
 	
 	void Awake ()
 	{
+		// this needs to be changed to basically change what its acquiring, path 1/2/3
+		// so just have it build the string based on what the player has chosen 
+		// as <Pathing> has three accessible paths in it
 		pathing = GameObject.Find ("Path_Container").GetComponent<Pathing> ().path1;
 	}
 
@@ -26,7 +29,7 @@ public class OffenseAI : MonoBehaviour {
 		iTween.MoveTo (gameObject, pathInfo);
 	}
 
-	void AdjustCurHealth (float val)
+	public void AdjustCurHealth (float val)
 	{
 		curHealth += val; //POSITIVE means heal, negative means damage
 		
