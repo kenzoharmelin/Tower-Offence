@@ -17,7 +17,7 @@ public class OffensiveUnitSpawner : MonoBehaviour {
 	//int spawnedUnitID;
 	List<GameObject> waveArray;
 	float spawnWait;
-	
+	GameObject spawnPoint;
 	
 	// Use this for initialization
 	void Awake () {
@@ -70,8 +70,8 @@ public class OffensiveUnitSpawner : MonoBehaviour {
 			if(!waveArray[i].activeInHierarchy)
 			{
 
-				waveArray[i].transform.position = chosenPath.transform.position;
-				waveArray[i].transform.rotation = chosenPath.transform.rotation;
+				waveArray[i].transform.position = spawnPoint.transform.position;
+				waveArray[i].transform.rotation = spawnPoint.transform.rotation;
 				waveArray[i].SetActive(true);
 
 
@@ -126,6 +126,18 @@ public class OffensiveUnitSpawner : MonoBehaviour {
 	public void SetPath(GameObject playersPath)
 	{
 		chosenPath = playersPath;
+		if(playersPath.name == "Path_1")
+		{
+			spawnPoint = path1SpawnPoint;
+		}
+		if(playersPath.name == "Path_2")
+		{
+			spawnPoint = path2SpawnPoint;
+		}
+		if(playersPath.name == "Path_3")
+		{
+			spawnPoint = path3SpawnPoint;
+		}
 	}
 
 }
