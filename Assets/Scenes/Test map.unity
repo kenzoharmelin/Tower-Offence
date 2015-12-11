@@ -37,9 +37,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
---- !u!127 &3
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -68,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -170,6 +168,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6a06c27e07f274448c203a43013cf38, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &472892375
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 410042, guid: 7be944a1f274f604a814e0104625e828, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.559000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 410042, guid: 7be944a1f274f604a814e0104625e828, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 410042, guid: 7be944a1f274f604a814e0104625e828, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.91799998
+      objectReference: {fileID: 0}
+    - target: {fileID: 410042, guid: 7be944a1f274f604a814e0104625e828, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410042, guid: 7be944a1f274f604a814e0104625e828, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410042, guid: 7be944a1f274f604a814e0104625e828, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410042, guid: 7be944a1f274f604a814e0104625e828, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 410042, guid: 7be944a1f274f604a814e0104625e828, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7be944a1f274f604a814e0104625e828, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &720885252
 Prefab:
@@ -364,7 +404,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -585,7 +627,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 416502, guid: 7b74a0f8886a09f41a5367f920745398, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.27826339e-18
+      value: .130999997
       objectReference: {fileID: 0}
     - target: {fileID: 416502, guid: 7b74a0f8886a09f41a5367f920745398, type: 2}
       propertyPath: m_LocalPosition.z
@@ -717,7 +759,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}

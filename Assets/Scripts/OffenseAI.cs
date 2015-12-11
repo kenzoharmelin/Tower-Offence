@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class OffenseAI : MonoBehaviour {
@@ -10,13 +10,32 @@ public class OffenseAI : MonoBehaviour {
 	private Object deathFX;
 
 	public float speed, curHealth, maxHealth;
+
+	OffensiveUnitSpawner _unitSpawner;
+	public GameObject _offensiveManager;
+	public string pathSpawnPointName;
 	
-	void Awake ()
+	void OnEnable()
 	{
 		// this needs to be changed to basically change what its acquiring, path 1/2/3
 		// so just have it build the string based on what the player has chosen 
 		// as <Pathing> has three accessible paths in it
-		pathing = GameObject.Find ("Path_Container").GetComponent<Pathing> ().path1;
+		_offensiveManager = GameObject.FindGameObjectWithTag("OffenceInventoryManager");
+		_unitSpawner = _offensiveManager.GetComponent<OffensiveUnitSpawner>();
+
+		if(pathSpawnPointName == "Path_1")
+		{
+			pathing = GameObject.Find ("Path_Container").GetComponent<Pathing> ().path1;
+		}
+		if(pathSpawnPointName == "Path_2")
+		{
+			pathing = GameObject.Find ("Path_Container").GetComponent<Pathing> ().path2;
+		}
+		if(pathSpawnPointName == "Path_3")
+		{
+			pathing = GameObject.Find ("Path_Container").GetComponent<Pathing> ().path3;
+		}
+
 	}
 
 	void Start ()

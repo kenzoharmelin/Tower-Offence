@@ -12,6 +12,7 @@ TagManager:
   - Path1SpawnPoint
   - Path2SpawnPoint
   - Path3SpawnPoint
+  - OffenceInventoryManager
   layers:
   - Default
   - TransparentFX

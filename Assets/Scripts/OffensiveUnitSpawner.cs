@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class OffensiveUnitSpawner : MonoBehaviour {
 
-	public GameObject Unit1, Unit2, Unit3;
+	public GameObject Unit1, Unit2, Unit3, chosenPath;
 	public int maxUnit1Number, maxUnit2Number, maxUnit3Number;
 	public int curAvailableUnit1s, curAvailableUnit2s, curAvailableUnit3s, unit1sInWave, unit2sInWave, unit3sInWave;
 	public Text unit1availableText, unit2availableText, unit3availableText, curUnits1inwaveText, curUnits2inwaveText, curUnits3inwaveText;
 	public bool stagingPhase;
 	public float spawnTime;
 	
-	GameObject curSpawnedUnit, chosenPath;
-	GameObject path1SpawnPoint, path2SpawnPoint, path3SpawnPoint;
+	GameObject curSpawnedUnit;
+	public GameObject path1SpawnPoint, path2SpawnPoint, path3SpawnPoint;
 	//int spawnedUnitID;
 	List<GameObject> waveArray;
 	float spawnWait;
@@ -56,22 +56,24 @@ public class OffensiveUnitSpawner : MonoBehaviour {
 
 		if(stagingPhase == false && Time.time >= spawnWait)
 		{
-			SpawnOffensiveUnit(chosenPath);
+			SpawnOffensiveUnit();
 			spawnWait = Time.time + spawnTime;
 		}
 	}
 	
 	//called from the Canvas button events
-	public void SpawnOffensiveUnit(GameObject pathChoice)
+	public void SpawnOffensiveUnit()
 	{
 		for(int i = 0; i < waveArray.Count; i++)
 		{
 
-			if(waveArray[i].activeInHierarchy)
+			if(!waveArray[i].activeInHierarchy)
 			{
-				waveArray[i].transform.position = pathChoice.transform.position;
-				waveArray[i].transform.rotation = pathChoice.transform.rotation;
+
+				waveArray[i].transform.position = chosenPath.transform.position;
+				waveArray[i].transform.rotation = chosenPath.transform.rotation;
 				waveArray[i].SetActive(true);
+
 
 			}
 		}
@@ -82,6 +84,7 @@ public class OffensiveUnitSpawner : MonoBehaviour {
 		if(curAvailableUnit1s > 0)
 		{
 			GameObject unt = (GameObject)Instantiate(Unit1);
+			unt.gameObject.GetComponent<OffenseAI>().pathSpawnPointName = chosenPath.name;
 			unt.SetActive(false);
 			waveArray.Add(unt);
 			unit1sInWave++;
@@ -96,6 +99,7 @@ public class OffensiveUnitSpawner : MonoBehaviour {
 		if(curAvailableUnit2s > 0)
 		{
 			GameObject unt = (GameObject)Instantiate(Unit2);
+			unt.gameObject.GetComponent<OffenseAI>().pathSpawnPointName = chosenPath.name;
 			unt.SetActive(false);
 			waveArray.Add(unt);
 			unit2sInWave++;
@@ -109,6 +113,7 @@ public class OffensiveUnitSpawner : MonoBehaviour {
 		if(curAvailableUnit3s > 0)
 		{
 			GameObject unt = (GameObject)Instantiate(Unit3);
+			unt.gameObject.GetComponent<OffenseAI>().pathSpawnPointName = chosenPath.name;
 			unt.SetActive(false);
 			waveArray.Add(unt);
 			unit3sInWave++;
@@ -116,6 +121,11 @@ public class OffensiveUnitSpawner : MonoBehaviour {
 			curUnits3inwaveText.text = "X " + unit3sInWave.ToString();
 			unit3availableText.text = curAvailableUnit3s + " Unit 3 available";
 		}
+	}
+
+	public void SetPath(GameObject playersPath)
+	{
+		chosenPath = playersPath;
 	}
 
 }

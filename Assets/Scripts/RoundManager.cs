@@ -11,9 +11,15 @@ public class RoundManager : MonoBehaviour {
 
 	float timer;
 
+	OffensiveUnitSpawner _offenceSpawnerScript;
+	GameObject _offenceInventoryManager;
+
 	// Use this for initialization
 	void OnEnable () {
 	
+		_offenceInventoryManager = GameObject.FindGameObjectWithTag("OffenceInventoryManager");
+		_offenceSpawnerScript = _offenceInventoryManager.GetComponent<OffensiveUnitSpawner>();
+
 		OffenceSetUp = true;
 		defenceSetUp = false;
 		roundStart = false;
@@ -50,6 +56,8 @@ public class RoundManager : MonoBehaviour {
 		{
 			defensiveHUD.SetActive(false);
 			countdownText.enabled = false;
+			roundStart = true;
+			_offenceSpawnerScript.stagingPhase = false;
 		}
 
 	}
