@@ -71,6 +71,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 416502}
   - 65: {fileID: 6542864}
+  - 114: {fileID: 11473222}
+  - 114: {fileID: 11494932}
   m_Layer: 9
   m_Name: MortarPit
   m_TagString: DefensiveUnit
@@ -111,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .5, z: 0}
+  m_LocalPosition: {x: .379999995, y: .209999993, z: 2.63000011}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 498122}
@@ -154,6 +156,40 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.85000002, y: .100000001, z: 1.84000003}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11473222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f96233371c76d4181297ea19293380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tag: OffensiveUnit
+  processTick: 1
+  atkDamage: 5
+  range: 20
+  attackCooldown: 5
+  attackTime: 0
+  curHealth: 60
+  maxHealth: 60
+  round: {fileID: 170020, guid: f7f31b24f67038a478b9c0bb6a1e1481, type: 2}
+  turret: {fileID: 142656}
+  firepoint: {fileID: 150892}
+--- !u!114 &11494932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f11055f6d86e8c47a80e716d2534c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmgFX: {fileID: 0}
 --- !u!212 &21277780
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -172,7 +208,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -198,7 +236,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}

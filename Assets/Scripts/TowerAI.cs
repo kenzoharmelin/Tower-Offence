@@ -22,7 +22,7 @@ public class TowerAI : MonoBehaviour {
 	void Update () 
 	{
 		if (Input.GetKeyDown("space")) {
-			CallDeath ();
+			AdjustCurHealth (-40);
 		}
 
 		if (attackTime > 0) { // should we count down
