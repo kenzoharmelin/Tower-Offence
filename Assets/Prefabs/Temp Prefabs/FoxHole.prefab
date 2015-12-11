@@ -168,14 +168,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: OffensiveUnit
-  processTick: 1
-  atkDamage: 2
-  range: 2.5
-  attackCooldown: 1
+  processTick: .5
+  atkDamage: .200000003
+  range: 5
+  attackCooldown: .200000003
   attackTime: 0
   curHealth: 80
   maxHealth: 80
+  target: {fileID: 0}
   round: {fileID: 182014, guid: d5519e82bf446a84e990d7cd34e7bcaf, type: 2}
+  roundGO: {fileID: 0}
   turret: {fileID: 118476}
   firepoint: {fileID: 105890}
 --- !u!114 &11498274
@@ -264,6 +266,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: range
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: processTick
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackCooldown
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: atkDamage
+      value: .200000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
