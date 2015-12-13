@@ -10,7 +10,7 @@ public class OffensiveUnitSpawner : MonoBehaviour {
 	public int curAvailableUnit1s, curAvailableUnit2s, curAvailableUnit3s, unit1sInWave, unit2sInWave, unit3sInWave;
 	public Text unit1availableText, unit2availableText, unit3availableText, curUnits1inwaveText, curUnits2inwaveText, curUnits3inwaveText;
 	public bool stagingPhase;
-	public float spawnTime;
+	public float spawnTime,waitTime;
 	
 	GameObject curSpawnedUnit;
 	public GameObject path1SpawnPoint, path2SpawnPoint, path3SpawnPoint;
@@ -53,7 +53,6 @@ public class OffensiveUnitSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		if(stagingPhase == false && Time.time >= spawnWait)
 		{
 			SpawnOffensiveUnit();
@@ -64,17 +63,15 @@ public class OffensiveUnitSpawner : MonoBehaviour {
 	//called from the Canvas button events
 	public void SpawnOffensiveUnit()
 	{
-		for(int i = 0; i < waveArray.Count; i++)
+		for(int i = 0; i < waveArray.Count; ++i)
 		{
-
 			if(!waveArray[i].activeInHierarchy)
 			{
-
+					
 				waveArray[i].transform.position = spawnPoint.transform.position;
 				waveArray[i].transform.rotation = spawnPoint.transform.rotation;
 				waveArray[i].SetActive(true);
-
-
+				return;
 			}
 		}
 	}

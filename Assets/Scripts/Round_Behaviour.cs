@@ -35,6 +35,10 @@ public class Round_Behaviour : MonoBehaviour {
 
 		iTween.MoveUpdate (gameObject, characteristics);
 
+		if (targ == null) {
+			Destroy (gameObject);
+		}
+
 		if (Vector3.Distance(targ.transform.position, transform.position) < 0.5f) {
 			Damage();
 		}
