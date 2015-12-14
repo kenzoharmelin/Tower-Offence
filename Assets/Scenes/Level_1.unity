@@ -154,8 +154,8 @@ MonoBehaviour:
   countdownText: {fileID: 274293632}
   offensiveHUD: {fileID: 780653827}
   defensiveHUD: {fileID: 890894617}
-  offenceRoundSetUpTime: 10
-  defenceRoundSetUpTime: 10
+  offenceRoundSetUpTime: 20
+  defenceRoundSetUpTime: 20
   roundStart: 0
   defenceSetUp: 0
   OffenceSetUp: 0
@@ -2557,6 +2557,7 @@ MonoBehaviour:
   curUnits3inwaveText: {fileID: 879289775}
   stagingPhase: 0
   spawnTime: 0
+  waitTime: 0
   path1SpawnPoint: {fileID: 0}
   path2SpawnPoint: {fileID: 0}
   path3SpawnPoint: {fileID: 0}
